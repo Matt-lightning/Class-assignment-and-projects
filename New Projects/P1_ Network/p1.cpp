@@ -53,18 +53,60 @@ int main(int argc, char* argv[]){
     }
     
     int i = 0;
-    //string inputarray[1000];
+    
     string sources[1000];
     string dests[1000];
     string bws[1000];
+    string unique[1000];
     while (input >>  sources[i] >> dests[i] >> bws[i]){
-        cin >> sources[i] >> dests[i] >> bws[i];
+       
 
-        cout << sources[i] << " " << dests[i] << " " << bws[i] << endl;
-
-        
-        
+        //cout << sources[i] << " " << dests[i] << " " << bws[i] << endl;
         i++;
+    }
+    
+    // need every source and dest to be uppercase
+    for(int i= 0 ; i < 1000; i++){
+        if(sources[i] == ""){
+            break;
+        }
+        if(islower(sources[i][0])){
+            sources[i] = toupper(sources[i][0]);
+        }
+        
+        cout << sources[i] << endl;
+        
+    }
+
+    cout << "---------------------" << endl;
+
+    for(int i= 0 ; i < 1000; i++){
+        if(dests[i] == ""){
+            break;
+        }
+        if(islower(dests[i][0])){
+            dests[i] = toupper(dests[i][0]);
+        }
+        
+        cout << dests[i] << endl;
+        
+    }
+
+    cout << "---------------------" << endl;
+
+    for(int i=0; i < sources[i].size(); i++){
+        for(int j=0; j < dests[j].size(); j++){
+            if(sources[i] == dests[j]){
+                unique[i] = sources[i];
+            }
+            else if(sources[i] != sources[i+1]){
+                unique[i] = sources[i];
+            }   
+            else if(dests[j] != dests[j+1]){
+                unique[i] = dests[j];
+            }
+        }
+        cout << unique[i] << endl;
     }
 
     input.close();
