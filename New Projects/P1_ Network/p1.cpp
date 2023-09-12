@@ -92,7 +92,7 @@ int main(int argc, char* argv[]){
         
     }
 
-    cout << "---------------------" << endl;
+    cout << "----------------------" << endl;
 
     for(int i=0; i < sources[i].size(); i++){
         for(int j=0; j < dests[j].size(); j++){
