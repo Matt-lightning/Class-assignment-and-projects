@@ -1,0 +1,2 @@
+non leaf means both columns
+leaf is one or the other
